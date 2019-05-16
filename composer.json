@@ -1,0 +1,25 @@
+{
+    "name": "wodrow/yii2wlog",
+    "description": "my log component",
+    "keywords": [
+        "log"
+    ],
+    "type": "yii2-extension",
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "^2.0.17"
+    },
+    "authors": [
+        {
+            "name": "wodrow",
+            "email": "wodrow451611cv@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "wodrow\\yii2wlog\\": "src/"
+        }
+    }
+}
