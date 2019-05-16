@@ -1,6 +1,6 @@
 {
     "name": "wodrow/yii2wlog",
-    "description": "my log component",
+    "description": "my yii2 log component",
     "keywords": [
         "log"
     ],

@@ -2,7 +2,9 @@
 namespace wodrow\yii2wlog;
 
 
-class Wlog
+use yii\base\Component;
+
+class Wlog extends Component
 {
 
 }
