@@ -6,3 +6,22 @@
 
 # yii2wlog
 yii2 wodrow log component
+
+## Install
+
+```html
+composer require wodrow/yii2wlog "dev-master" -vv
+
+yii migrate --migrationPath=@mdm/admin/migrations
+```
+
+````php
+'components' => [
+    ...
+    'wlog' => [
+        'class' => \wodrow\yii2wlog\Wlog::class,
+    ],
+    ...
+],
+'bootstrap' => [..., 'wlog'],
+````
