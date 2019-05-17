@@ -12,7 +12,7 @@ yii2 wodrow log component
 ```html
 composer require wodrow/yii2wlog "dev-master" -vv
 
-yii migrate --migrationPath=@mdm/admin/migrations
+yii migrate --migrationPath=@wodrow/yii2wlog/migrations
 ```
 
 ````php
