@@ -25,7 +25,13 @@ class Wlog extends Component
         $this->_req_log = new WwReqLog();
         $this->_req_log->app_id = $this->app_id;
         $this->_req_log->created_at = time();
-        $this->_req_log->route = \Yii::$app->controller->route;
+        if (\Yii::$app instanceof \yii\web\Application){
+            $this->saveWebAppReq();
+        }
+    }
+
+    public function saveWebAppReq()
+    {
         $this->_req_log->from_ip = \Yii::$app->request->userIP;
         $this->_req_log->get = \Yii::$app->request->get();
         $this->_req_log->post = \Yii::$app->request->post();
@@ -36,6 +42,10 @@ class Wlog extends Component
             '$_REQUET' => $_REQUEST,
             '$_ENV' => $_ENV,
         ];
+        \Yii::$app->on(\Yii::$app::EVENT_AFTER_ACTION, function (){
+            $this->_req_log->route = \Yii::$app->controller->route;
+            $this->saveReq();
+        });
     }
 
     public function saveReq()
